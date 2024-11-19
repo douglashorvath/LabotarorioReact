@@ -1,15 +1,15 @@
-/* Fundo animado com estrelas */
+/* Página do contador */
 .pagina {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     position: relative;
     background-color: #000;
-    /* Fundo preto */
+    overflow: hidden;
 }
 
+/* Fundo animado */
 .fundo-estrelas {
     position: absolute;
     top: 0;
@@ -35,11 +35,14 @@
 /* Retângulo central */
 .retangulo-central {
     background-color: rgba(255, 255, 255, 1);
-    /* Transparência no fundo branco */
     padding: 20px;
     border-radius: 10px;
     width: 80%;
     max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
@@ -60,10 +63,8 @@
 
 /* Total */
 .total-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .label-total {
@@ -80,13 +81,15 @@
     color: black;
     text-align: center;
     border-radius: 5px;
+    min-width: 120px;
 }
 
 /* Contadores */
 .contadores {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
     width: 100%;
 }
 
@@ -94,20 +97,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 250px;
 }
 
 /* Imagens */
 img {
-    width: 250px;
-    height: 267px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     margin-bottom: 10px;
-    object-fit: cover;
-    /* Ajuste sem distorção */
 }
 
 /* Rótulos */
 .label {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -117,9 +120,8 @@ img {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 5px;
-    min-width: 80px;
     text-align: center;
     margin: 10px 0;
 }
@@ -135,20 +137,17 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
     color: white;
     border: none;
-    border-radius: 50%;
-    /* Botões redondos */
     cursor: pointer;
     font-weight: bold;
 }
 
 .botao.mais {
     width: 70px;
-    /* Botão maior */
     height: 70px;
     background-color: #28a745;
-    font-size: 2rem;
 }
 
 .botao.mais:hover {
@@ -157,12 +156,32 @@ img {
 
 .botao.menos {
     width: 60px;
-    /* Botão menor */
     height: 60px;
     background-color: #dc3545;
-    font-size: 1.5rem;
 }
 
 .botao.menos:hover {
     background-color: #c82333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .retangulo-central {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .total-caixinha {
+        font-size: 1.5rem;
+    }
+
+    .botao.mais,
+    .botao.menos {
+        width: 60px;
+        height: 60px;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
 }
