@@ -10,7 +10,9 @@
 
 .letreiro {
     color: white;
-    font-size: 2rem;
+    font-size: 10rem;
+    /* Letreiro extremamente grande */
+    font-weight: bold;
     white-space: nowrap;
     position: absolute;
 }

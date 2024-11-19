@@ -1,0 +1,168 @@
+/* Fundo animado com estrelas */
+.pagina {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    /* Fundo preto */
+}
+
+.fundo-estrelas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(white, transparent 70%);
+    background-size: 10px 10px;
+    animation: estrelas 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes estrelas {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Retângulo central */
+.retangulo-central {
+    background-color: rgba(255, 255, 255, 1);
+    /* Transparência no fundo branco */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Botão Resetar */
+.reset-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+
+.reset-button:hover {
+    color: #007bff;
+}
+
+/* Total */
+.total-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.label-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.total-caixinha {
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Contadores */
+.contadores {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.contador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagens */
+img {
+    width: 250px;
+    height: 267px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    /* Ajuste sem distorção */
+}
+
+/* Rótulos */
+.label {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Retângulo com número */
+.numero-container {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 2rem;
+    border-radius: 5px;
+    min-width: 80px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* Botões redondos */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao.mais {
+    width: 70px;
+    /* Botão maior */
+    height: 70px;
+    background-color: #28a745;
+    font-size: 2rem;
+}
+
+.botao.mais:hover {
+    background-color: #218838;
+}
+
+.botao.menos {
+    width: 60px;
+    /* Botão menor */
+    height: 60px;
+    background-color: #dc3545;
+    font-size: 1.5rem;
+}
+
+.botao.menos:hover {
+    background-color: #c82333;
+}

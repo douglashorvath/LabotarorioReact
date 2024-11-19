@@ -9,6 +9,7 @@ const Home = () => {
             <ul>
                 <li><Link to="/atividade1">Atividade 1 - Letreiro</Link></li>
                 <li><Link to="/atividade2">Atividade 2 - Relógio</Link></li>
+                <li><Link to="/atividade3">Atividade 3 - Contador de Pessoas</Link></li>
             </ul>
         </div>
     );
