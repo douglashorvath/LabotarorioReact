@@ -1,0 +1,10 @@
+.relogio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-size: 8rem;
+    font-family: 'Arial', sans-serif;
+}
