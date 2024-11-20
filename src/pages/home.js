@@ -24,6 +24,38 @@ export default function Home() {
                     Atividade 5 - Interatividade
                 </Link>
             </div>
+            <div style={{ marginTop: "20px", textAlign: "left" }}>
+                <a
+                    href="http://horvathstore.liberteti.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-button"
+                    style={{
+                        display: "block",
+                        backgroundColor: "#fff",
+                        color: "#0078d7",
+                        textDecoration: "none",
+                        padding: "15px",
+                        borderRadius: "5px",
+                        textAlign: "center",
+                    }}
+                >
+                    <div style={{ fontSize: "1.2rem", marginBottom: "10px" }}>
+                        Atividade 6 - Loja
+                    </div>
+                    <p style={{ fontSize: "0.9rem", margin: 0 }}>
+                        Para fazer login na loja, utilize:
+                        <br />
+                        <strong>Email:</strong> joao.silva@example.com<br />
+                        <strong>Senha:</strong> senha123
+                        <br />
+                        ou
+                        <br />
+                        <strong>Email:</strong> maria.oliveira@example.com<br />
+                        <strong>Senha:</strong> 123maria
+                    </p>
+                </a>
+            </div>
         </div>
     );
 }
